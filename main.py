@@ -1,11 +1,12 @@
 from locations.location import *
 
+# desert = Locations("Desert",2)
+#             print(desert)
+#             print(self.choice_locations(desert))
 class Main:
 
 
     def choice_locations(self,locations):
-
-        print(f"Вы находитесь в {locations.title}")
 
         print("1.Уйти обратно.")
         print("2.Собрать вещи с локации.")
@@ -15,6 +16,19 @@ class Main:
 
         if choice == 1:
             self.main()
+
+
+    def ch_loc(self):
+
+        print("Выбор локации.")
+        print("1.Пустны.")
+
+        choice_ch = int(input("Выбор: ","\n"))
+        if choice_ch == 1:
+            desert = Locations("Desert",2)
+            print(desert)
+            print(self.choice_locations(desert))
+        
 
 
     def main(self):
@@ -27,10 +41,7 @@ class Main:
         choice = int(input("Действие: "))
 
         if choice == 1:
-            desert = Locations("Desert",2)
-            print(desert)
-            print(self.choice_locations(desert))
-
+            self.ch_loc()
 
 
 if __name__ == '__main__':
