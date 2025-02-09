@@ -9,5 +9,6 @@ class Locations:
 
 
     def Desert(self):
+        
         Desert_location = Locations("Desert",2)
         return Desert_location
